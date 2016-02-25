@@ -1,0 +1,31 @@
+/* START RESET CSS */
+/* =============== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td
+	{margin:0; padding:0; border:0; outline:0; font-weight:inherit; font-style:inherit; font-size:100%; font-family:inherit; vertical-align:baseline;}
+:focus	{outline:0;}
+body	{line-height:1; color:#000; background:#FFF;}
+ol, ul	{list-style:none;}
+table	{border-collapse:separate; border-spacing: 0;}
+caption, th, td
+	{text-align:left; font-weight:normal;}
+/* =============== */
+/*   END RESET CSS   */
+
+body		{font:normal 8pt/12pt verdana,arial,helvetica,sans-serif; color:#333; background:#fff;}
+
+#SkipLinks, 
+#Tools, 
+#Search, 
+#Nav,
+#Footer a		{display:none;}
+
+#Header h1	{font-weight:normal; font-size:24pt; line-height:24pt; float:left; padding:0 10pt 0 0; margin:0 10pt 0 0; border-right:1pt solid #ccc;}
+#OAMI p		{line-height:24pt; font-weight:bold;}
+#Header		{border-bottom:4pt solid #666; padding-bottom:10pt;}
+#Path		{clear:both; margin:1pt 0 0 0; border-top:1pt solid #999; border-bottom:1pt solid #999; padding:2pt 0;}
+#Content		{border-bottom:1pt solid #999; padding:30pt 0;}
+#Footer		{border-top:4pt solid #666; padding-top:5pt; margin-top:1pt;}
+#Footer li		{float:right;}
+#Footer p.Organisation	{padding:5pt 0; border-top:1pt solid #ccc; margin-top:5pt;}
+#Footer p.Organisation strong, 
+#Footer p.Organisation span	{white-space:nowrap; font-weight:normal;}

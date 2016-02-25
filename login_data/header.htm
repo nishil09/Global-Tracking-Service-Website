@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>OHIM Header</title>
+<link rel="stylesheet" type="text/css" media="print" href="header_data/oami_common_print.css">
+<link rel="stylesheet" type="text/css" media="print" href="header_data/oami_website_print.css">
+
+<link rel="stylesheet" type="text/css" href="header_data/oami_common.css" media="screen, projection">
+<!--[if IE]>
+	<link rel="stylesheet"	type="text/css" href="css/oami_common_ie-fix.css" media="screen, projection" />
+<![endif]-->
+<!--[if lt IE 6]>
+	<link rel="stylesheet"	type="text/css" href="css/oami_common_ie-lt6-fix.css" media="screen, projection" />
+<![endif]-->
+<script type="text/javascript" src="header_data/klayers.js"></script>
+<script type="text/javascript" src="header_data/global.js"></script>
+<script type="text/javascript" src="login_data/jquery_002.js"></script>
+<script type="text/javascript" src="header_data/labels.js"></script>
+<script type="text/javascript" src="login_data/owscommon.js"></script>
+<script type="text/javascript">
+	var lang = "en";
+	var app = "undefined";
+	var label = "HOME";
+	var helpURL = "";
+	var fontSize = "false";
+	var claw = "";
+	var href = location.href;
+	var params = href.substring(href.indexOf("?") + 1, href.length).split("&");
+	for(i=0; i < params.length; i++){
+		if (params[i].indexOf("lang=") >= 0){
+			lang = HtmlEncode(params[i].split("=")[1].toLowerCase());
+		}
+		if (params[i].indexOf("app=") >= 0){
+			app = HtmlEncode(params[i].split("=")[1]);
+		}
+		// For the moment the help url will be the same that the one of the OWS
+		/*if (params[i].indexOf("helpurl=") >= 0){
+			helpURL = params[i].split("=")[1];
+			//We get the entire url, with parameters if there are them
+			if(params[i].split("=").length > 2){
+				for(var j = 2; j < params[i].split("=").length; j++){
+					helpURL = helpURL + "=" + params[i].split("=")[j];
+				}
+			}
+			if (helpURL == "" || helpURL == "javascript:void(0);"){
+				helpURL = "http://oami.europa.eu/ows/rw/pages/FAQ/FAQ.en.do";
+			}
+		}*/
+		if (params[i].indexOf("fontsize=") >= 0){
+			fontSize = HtmlEncode(params[i].split("=")[1].toLowerCase());
+		}
+		if (params[i].indexOf("claw=") >= 0){
+			claw = HtmlEncode(params[i].split("=")[1].toLowerCase());
+		}
+	}
+	var helpURL = "http://oami.europa.eu/ows/rw/pages/FAQ/FAQ." + lang + ".do";
+
+	label = getMenuID(app, claw);
+	
+	function updateLang(){
+		document.body.className = lang.toUpperCase();
+		document.LangForm.Language.value = lang;
+	}
+</script>
+<script type="text/javascript" src="header_data/font.js"></script>
+<!-- base href="https://secure.oami.europa.eu/OWSCommon/header.htm?lang=EN&app=mypage&fontsize=true" -->
+</head>
+
+<body class="EN" style="font-size: 70%;" onload="updateLang();updateLabel(app,claw);">
+<div id="Wrapper">
+	<div id="Tools">
+		<div id="Language">
+			<script type="text/javascript">
+				//<![CDATA[
+				document.write('<form name="LangForm" method="post" action="#">');
+				document.write('<fieldset>');
+				document.write('<legend>Site language<\/legend>');
+				document.write('<label for="Lang">Select site language:<\/label> ');
+				document.write('<select id="Lang" name="Language" title="' + labels.get(lang, 'languages_title') + '" onChange="parent.changeLanguage(this.options[this.selectedIndex].value)"; return true;>');
+				document.write('<option value="es">Espa&ntilde;ol (es)<\/option>');
+				document.write('<option value="de">Deutsch (de)<\/option>');
+				document.write('<option value="en" selected="selected">English (en)<\/option>');
+				document.write('<option value="fr">Fran&ccedil;ais (fr)<\/option>');
+				document.write('<option value="it">Italiano (it)<\/option>');
+				document.write('<\/select>');
+				document.write('<\/fieldset>');
+				document.write('<\/form>');
+				//]]>
+			</script><form name="LangForm" method="post" action="#"><fieldset><legend>Site language</legend><label for="Lang">Select site language:</label> <select id="Lang" name="Language" title="Keyboard users: Press ALT+down arrow to open dropdown menu to browse through the language options and then press ENTER to make your selection" onchange="parent.changeLanguage(this.options[this.selectedIndex].value)" ;="" return="" true;=""><option value="es">Español (es)</option><option value="de">Deutsch (de)</option><option value="en" selected="selected">English (en)</option><option value="fr">Français (fr)</option><option value="it">Italiano (it)</option></select></fieldset></form>
+			
+		</div><div id="TextSize"><p><a class="Selected" accesskey="-" title="Text size: Small" id="Small" href="#">A-<span></span></a><span> | </span><a accesskey="=" title="Text size: Medium" id="Medium" href="#">A<span></span></a><span> | </span><a accesskey="+" title="Text size: Large" id="Large" href="#">A+<span></span></a></p></div><!-- Language // -->
+		
+		<div id="SiteInfo">
+			<ul>
+			<script language="javascript">
+				document.write("<li><a href='" + helpURL + "' id='HelpFiles' title='" + labels.get(lang, "helpFiles_title") + "' accesskey='6'><span>" + labels.get(lang, "helpFiles_text") + "</span></a></li>");
+				document.write("<li><a href='http://oami.europa.eu/ows/rw/pages/OHIM/contact." + lang + ".do' id='Contact' title='" + labels.get(lang, "contact_title") + "' accesskey='7'><span>" + labels.get(lang, "contact_text") + "</span></a></li>");
+				document.write("<li><a href='http://oami.europa.eu/ows/rw/pages/siteMap." + lang + ".do' id='SiteMap' title='" + labels.get(lang, "siteMap_title") + "' accesskey='8'><span>" + labels.get(lang, "siteMap_text") + "</span></a></li>");
+				document.write("<li><a href='http://oami.europa.eu/ows/rw/pages/QPLUS/links." + lang + ".do' id='Links' title='" + labels.get(lang, "links_title") + "' accesskey='9'><span>" + labels.get(lang, "links_text") + "</span></a></li>");
+			</script><li><a href="http://oami.europa.eu/ows/rw/pages/FAQ/FAQ.en.do" id="HelpFiles" title="Frequently asked questions" accesskey="6"><span>FAQ</span></a></li><li><a href="http://oami.europa.eu/ows/rw/pages/OHIM/contact.en.do" id="Contact" title="Send us your comments or questions" accesskey="7"><span>Contact us</span></a></li><li><a href="http://oami.europa.eu/ows/rw/pages/siteMap.en.do" id="SiteMap" title="Site map" accesskey="8"><span>Site map</span></a></li><li><a href="http://oami.europa.eu/ows/rw/pages/QPLUS/links.en.do" id="Links" title="Links" accesskey="9"><span>Links</span></a></li>
+			</ul>
+		</div><!-- SiteInfo // -->
+	</div><!-- Tools // -->
+
+	<div id="Header">
+		<!-- // Title of the page -->
+		<script language="javascript">document.write("<h1 title='" + labels.get(lang, "title_text") + "'><abbr title='" + labels.get(lang, "title_title") + "'>" + labels.get(lang, "title_text") + "</abbr><span></span></h1>");</script><h1 title="OHIM"><abbr title="Office for Harmonization in the Internal Market">OHIM</abbr><span></span></h1>
+
+		<div id="OAMI">
+			<script language="javascript">document.write("<p title=\""+ labels.get(lang, "description") +"\">"+ labels.get(lang, "description") +"<span></span></p>");</script><p title="The Trade Marks and Designs Registration Office of the European Union">The Trade Marks and Designs Registration Office of the European Union<span></span></p>
+			
+			<div id="Nav">
+				<ul>
+				<script language="javascript">
+					document.write("<li id='Home'><a href='http://oami.europa.eu/ows/rw/pages/index." + lang + ".do' title=\"" + labels.get(lang, "HOMELabel_title") + "\" accesskey='1'>" + labels.get(lang, "HOMELabel_text") + "</a></li>");
+					document.write("<li id='CTM'><a href='http://oami.europa.eu/ows/rw/pages/CTM/index." + lang + ".do' title=\"" + labels.get(lang, "CTMLabel_title") + "\" accesskey='2'>" + labels.get(lang, "CTMLabel_text") + "</a></li>");
+					document.write("<li id='RCD'><a href='http://oami.europa.eu/ows/rw/pages/RCD/index." + lang + ".do' title=\"" + labels.get(lang, "RCDLabel_title") + "\" accesskey='3'>" + labels.get(lang, "RCDLabel_text") + "</a></li>");
+					document.write("<li id='YOU'><a href='http://oami.europa.eu/ows/rw/pages/QPLUS/index." + lang + ".do' title=\"" + labels.get(lang, "YOULabel_title") + "\" accesskey='4'>" + labels.get(lang, "YOULabel_text") + "</a></li>");
+					document.write("<li id='ABOUT'><a href='http://oami.europa.eu/ows/rw/pages/OHIM/index." + lang + ".do' title=\"" + labels.get(lang, "ABOUTLabel_title") + "\" accesskey='5'>" + labels.get(lang, "ABOUTLabel_text") + "</a></li>");
+				</script><li id="Home"><a href="http://oami.europa.eu/ows/rw/pages/index.en.do" title="Home page" accesskey="1">Home</a></li><li id="CTM"><a href="http://oami.europa.eu/ows/rw/pages/CTM/index.en.do" title="The Community Trade Mark" accesskey="2">Trade Marks</a></li><li id="RCD"><a href="http://oami.europa.eu/ows/rw/pages/RCD/index.en.do" title="The Community Design" accesskey="3">Designs</a></li><li id="YOU">Quality plus</li><li id="ABOUT"><a href="http://oami.europa.eu/ows/rw/pages/OHIM/index.en.do" title="About OHIM" accesskey="5">About OHIM</a></li>
+				</ul>
+			</div><!-- Nav // -->
+		</div><!-- OAMI // -->
+	</div><!-- Header // -->
+
+	<!-- Include also the container Div in your application // -->
+	<div id="Container">
+		<div id="Path">
+			<script lang="JavaScript">
+				document.write(labels.get(lang, "breadcrumb") + ': <a href="http://oami.europa.eu/ows/rw/pages/index.' + lang + '.do">' + labels.get(lang, "HOMELabel_text") + '</a> > <a href="' + getBreadcrumbUrl(label, lang) + '" >' + labels.get(lang, label + "Label_text") + '</a> > ' + getBreadcrumbLastElement(app));
+			</script>You are here: <a href="http://oami.europa.eu/ows/rw/pages/index.en.do">Home</a> &gt; <a href="http://oami.europa.eu/ows/rw/pages/QPLUS/index.en.do">Quality plus</a> &gt; MyPage
+		</div><!-- Path // -->
+	</div><!-- Container // -->
+</div><!-- Wrapper // -->
+
+</body></html>

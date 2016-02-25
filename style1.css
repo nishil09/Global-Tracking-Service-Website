@@ -1,0 +1,174 @@
+.header
+{ 
+  position:absolute;
+  top:0px;
+  left:0px;
+  height:58px;
+  width:100%;
+  font-family:Calibri;
+  font:bolder;
+  color:#FFF;
+  background-color:#335C91;
+}
+.header p
+{
+  position:absolute;
+  top:-13px;
+  left:0px;	
+  font-family:Calibri;
+  font:bolder;
+  font-size:30px;
+  color:#FFF;
+}
+.welcomeuser
+{
+	position:absolute;
+	top:58px;
+	left:0px;
+	height:30px;
+	width:100%;
+	font-size:18px;
+	font-family:"Arial Black", Gadget, sans-serif;
+	color:#000;
+	background-color:#C0C0C0;
+}
+.wl
+{
+  position:absolute;
+  top:5px;
+  left:0px;	
+  font-family:Calibri;
+  font:bolder;
+  font-size:18px;
+  color:#000;
+}
+.left
+{
+position:absolute;
+left:0px;
+top:88px;
+width:328px;
+height:500px;
+background-color:#B6C4DE;
+}
+.th
+{
+color:#FFF;
+font-size:20px;
+font-family:"Times New Roman", Times, serif;
+background-color:#335C91;
+}
+.tr
+{
+font-size:15px;
+color:#000;
+}
+.group
+{
+	position: absolute;
+	left:0px;
+	top:380px;
+	font-family: Calibri;
+	font: bolder;
+	font-size: 18px;
+	color: #000;
+}
+.left2
+{
+position:absolute;
+left:0px;
+top:413px;
+width:328px;
+height:175px;
+background-color:#B6C4DE;
+}
+.map
+{
+position:absolute;
+left:328px;
+top:88px;
+height:500px;
+width:800px;;
+}
+.end
+{ 
+  position:absolute;
+  top:589px;
+  left:0px;
+  height:35px;
+  width:100%;
+  font-family:Calibri;
+  font:bolder;
+  font-size:15px;
+  color:#FFF;
+  background-color:#335C91;
+}
+.logout
+{
+  position:absolute;
+  top:18px;
+  left:1250px;	
+  font-family:Calibri;
+  font:bolder;
+  font-size:25px;
+  color:#FFF;
+}
+.report
+{
+  position: absolute;
+  top: 2000px;
+  left: 747px;
+  font-family: Calibri;
+  font: bolder;
+  font-size: 100px;
+  color: #FFF;
+}
+.date
+{ 
+  position:absolute;
+  top:350px;
+  left:15px;
+  font-family: Rock; 
+  font-size:18px;
+  color:#000064;
+}
+
+
+
+.list2
+{
+position:absolute;
+left:110px;
+top:250px;
+color: #008040;
+font:bolder;
+font-size:19px;
+font-family: Broadway;
+}
+
+.list3
+{
+position:absolute;
+left:110px;
+top:300px;
+font-family: Broadway;
+font:bolder;
+font-size:19px;
+text-shadow:#FF8040;
+color: #6F006F;
+}
+.comnew
+{
+	position:absolute;
+	top:77px;
+	left:555px;
+	font-size:30px;
+	font-family: "Harlow Solid Italic";
+	color:#000064;
+}
+.nounderline
+{
+	text-decoration:underline;
+	text-decoration:none;
+        color:#FFF;
+}

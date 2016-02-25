@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>OHIM Footer</title>
+<link rel="stylesheet" type="text/css" media="print" href="header_data/oami_common_print.css">
+<link rel="stylesheet" type="text/css" media="print" href="header_data/oami_website_print.css">
+
+<link rel="stylesheet" type="text/css" href="header_data/oami_common.css" media="screen, projection">
+<script type="text/javascript" src="header_data/labels.js"></script>
+<script type="text/javascript" src="login_data/owscommon.js"></script>
+<!-- base href="https://secure.oami.europa.eu/OWSCommon/footer.htm?lang=EN&version=6.4" -->
+<script type="text/javascript">
+	var lang = "en";
+	var version = "undefined";
+	var params = location.href.substring(location.href.indexOf("?") + 1, location.href.length).split("&");
+	for(i=0; i < params.length; i++){
+		if (params[i].indexOf("lang=") >= 0){
+			lang = HtmlEncode(params[i].split("=")[1]);
+			lang = lang.toLowerCase();
+		}
+		if (params[i].indexOf("version=") >= 0){
+			version = HtmlEncode(params[i].split("=")[1]);
+		}
+	}
+</script></head>
+
+
+<body style="font-size: 70%;" onload="document.getElementById('isLoaded').value = 'true';">
+	<input id="isLoaded" value="true" type="hidden">
+	 <div id="Footer">
+		<ul>
+			<li>© 1995-2010</li>
+			<script language="javascript">
+				document.write("<li><a target='_blank' id='legalNotices' href='http://oami.europa.eu/ows/rw/pages/legalNotices." + lang + ".do' title='" + labels.get(lang, "legalNotices_title") + "'>" + labels.get(lang, "legalNotices_text") + "</a></li>");
+				document.write("<li><a target='_blank' id='dataProtection' href='http://oami.europa.eu/ows/rw/pages/dataProtection." + lang + ".do' title='" + labels.get(lang, "dataProtection_title") + "'>" + labels.get(lang, "dataProtection_text") + "</a></li>");
+				document.write("<li><a target='_blank' id='compatibility' href='http://oami.europa.eu/ows/rw/pages/compatibility." + lang + ".do' title='" + labels.get(lang, "compatibility_title") + "' accesskey='0'>" + labels.get(lang, "compatibility_text") + "</a></li>");
+			</script><li><a target="_blank" id="legalNotices" href="http://oami.europa.eu/ows/rw/pages/legalNotices.en.do" title="Disclaimer and Copyright notice">Legal Notices</a></li><li><a target="_blank" id="dataProtection" href="http://oami.europa.eu/ows/rw/pages/dataProtection.en.do" title="Personal data protection statement">Data Protection</a></li><li><a target="_blank" id="compatibility" href="http://oami.europa.eu/ows/rw/pages/compatibility.en.do" title="Compatibility" accesskey="0">Compatibility</a></li>
+		</ul>
+		<p><span id="version_text"><script language="javascript">document.write(labels.get(lang, "version"))</script>Version</span>: <span id="version_number"><script language="javascript">document.write(version)</script>6.4</span></p>
+		<p class="Organisation"><strong><script language="javascript">document.write(labels.get(lang, "organization"))</script>Office for Harmonization in the Internal Market (Trade Marks and Designs)</strong>
+		 <span><script language="javascript">document.write(labels.get(lang, "address"))</script>Avenida de Europa 4, E-03008 Alicante, Spain - Tel: +34 96 513 9400 - e-mail:
+			<script type="text/javascript">
+			//<![CDATA[
+				document.write("<a id='email' href='m" + "ailto:" + "e-businesshelp" + "@oami" + ".europa.eu'>e-business help</a>");
+			//]]>
+			</script><a id="email" href="mailto:e-businesshelp@oami.europa.eu">e-business help</a>
+		 </span>
+		</p>
+	</div><!-- Footer // -->
+	<script>
+		//alert(currentFont + '%');
+		//parent.changeFontSize(parent.document,/*currentFont +*/ '90%');
+	</script>
+
+
+</body></html>

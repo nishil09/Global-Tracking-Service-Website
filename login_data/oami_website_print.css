@@ -1,0 +1,43 @@
+#ProArea, 
+#SideNav	, 
+#Menu, 
+#SideBar		{display:none;}
+
+#Content		{text-align:justify;}
+
+#Content strong		{font-weight:bold;}
+#Content em		{font-style:italic;}
+#Content h1, #Content h2, #Content h3, #Content h4, #Content h5, #Content h6
+			{font-family:arial,helvetica,tahoma,sans-serif; font-weight:bold; margin:0 0 0.5em 0;}
+#Content h1		{font-size:200%; padding-bottom:0.5em; border-bottom:1pt solid #ccc;}
+#Content h2		{font-size:180%;}
+#Content h3		{font-size:160%;}
+#Content h4		{font-size:140%;}
+#Content h5		{font-size:120%;}
+#Content h6		{font-size:100%;}
+
+#Content p		{margin:0 0 1em 0;}
+#Content ul		{margin:0 0 1em 3em; list-style:disc;}
+#Content ul ul		{margin:0.5em 0 0.5em 3em; list-style:circle;}
+#Content ol		{margin:0 0 1em 3em; list-style:decimal;}
+#Content ol ol		{margin:0.5em 0 0.5em 3em; list-style:lower-roman;}
+#Content dl		{margin:0 0 1em 0;}
+#Content dl dl		{margin:0.5em 0 0.5em 0;}
+#Content dt		{font-weight:bold;}
+#Content dd		{margin:0 0 0 3em;}
+
+#Intro p			{}
+
+#News			{float:left; width:100%;}
+#News h2		{margin:15px 0 -16px 0; padding:0 5px 10px 0;}
+#News img		{float:left;}
+#News dl			{float:left; width:100%; padding:0 0 15px 0; margin:0;}
+#News dt			{padding:16px 0 0 0; margin:15px 0 0 0;}
+#News dt span		{display:block; margin-left:100px;}
+#News dd		{margin-left:100px;}
+#News dd.Date		{line-height:200%;}
+#News dd.More		{float:right; line-height:200%;}
+#News dd.More		{padding-right:12px;}
+#News ul			{float:left; width:100%; margin:0; padding:0; list-style:none;}
+#News ul li		{text-align:right; line-height:28px; height:40px; padding-right:17px;}
+
